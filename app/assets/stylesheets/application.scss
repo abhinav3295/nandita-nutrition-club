@@ -14,3 +14,6 @@
 
  @import "bootstrap-sprockets";
  @import "bootstrap";
+.button_to.btn-inline {
+  display: inline !important;
+}
