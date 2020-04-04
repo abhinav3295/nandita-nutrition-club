@@ -20,9 +20,9 @@
         <td><%= member.age %></td>
         <td><%= member.mobile %></td>
         <td><%= member.date_of_birth %></td>
-        <td><%= button_to 'Show', member %></td>
-        <td><%= button_to 'Edit', edit_member_path(member) %></td>
-        <td><%= button_to 'Destroy', member, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= button_to 'Show', member_path(member), :method => :get, :class => "btn btn-primary"  %></td>
+        <td><%= button_to 'Edit', edit_member_path(member), :method => :get, :class =>  "btn btn-default"  %></td>
+        <td><%= button_to 'Destroy', member, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger"  %></td>
       </tr>
     <% end %>
   </tbody>
@@ -30,4 +30,4 @@
 
 <br>
 
-<%= button_to 'New Member', new_member_path %>
+<%= button_to 'New Member', new_member_path, :method => :get, :class => 'btn btn-default' %>

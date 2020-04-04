@@ -20,5 +20,5 @@
   <%= @member.date_of_birth %>
 </p>
 
-<%= link_to 'Edit', edit_member_path(@member) %> |
-<%= link_to 'Back', members_path %>
+<%= button_to 'Edit', edit_member_path(@member), :method => :get, :class => 'btn btn-primary' %>
+<%= button_to 'Back', members_path , :method => :get, :class => 'btn btn-default'%>

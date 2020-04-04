@@ -1,5 +1,4 @@
 <h1>New Member</h1>
 
 <%= render 'form', member: @member %>
-
-<%= link_to 'Back', members_path %>
+<%= button_to 'Back', members_path, :method => :get, :class =>  "btn btn-default" %>

@@ -2,5 +2,4 @@
 
 <%= render 'form', member: @member %>
 
-<%= button_to 'Show', @member %> |
-<%= button_to 'Back', members_path %>
+<%= button_to 'Back', members_path, :method => :get, :class => 'btn btn-default' %>
