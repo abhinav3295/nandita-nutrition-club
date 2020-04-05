@@ -2,16 +2,14 @@
 
 <h1>Members</h1>
 
-<%= link_to 'New Member', new_member_path, :class => 'btn btn-primary' %>
+<%= link_to 'Add Member', new_member_path, :class => 'btn btn-primary' %>
 
 <table  class="table table-striped">
   <thead>
     <tr>
       <th scope="col">#</th>
       <th scope="col">Name</th>
-      <th scope="col">Age</th>
       <th scope="col">Mobile</th>
-      <th scope="col">Date of birth</th>
       <th scope="col">Actions</th>
     </tr>
   </thead>
@@ -21,11 +19,9 @@
       <tr>
         <th scope="col"><%= member.id %></th>
         <td><%= member.name %></td>
-        <td><%= member.age %></td>
         <td><%= member.mobile %></td>
-        <td><%= member.date_of_birth %></td>
         <td>
-          <div class="btn-group">
+          <div>
             <%= link_to 'Show', member_path(member), :class => 'btn btn-primary' %>
             <%= link_to 'Edit', edit_member_path(member), :class => 'btn btn-default' %>
             <%= link_to 'Delete', member, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'btn btn-danger' %>

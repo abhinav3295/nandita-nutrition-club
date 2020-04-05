@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>ID:</strong>
+  <%= @stock.id %>
+</p>
+
+<p>
+  <strong>Product:</strong>
+  <%= @stock.product.name %>
+</p>
+
+<p>
+  <strong>Count:</strong>
+  <%= @stock.count %>
+</p>
+
+<p>
+  <strong>CreatedAt:</strong>
+  <%= @stock.created_at %>
+</p>
+
+<%= link_to 'Edit', edit_stock_path(@stock), {:class=>"btn btn-primary"} %>
+<%= link_to "Back", :back, {:class=>"btn btn-default"} %>

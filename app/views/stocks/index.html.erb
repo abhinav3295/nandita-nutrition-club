@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Stocks</h1>
+
+<%= link_to 'Add Stock', new_stock_path, :class => 'btn btn-primary' %>
+
+<table  class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Product</th>
+      <th scope="col">Count</th>
+      <th scope="col">Actions</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @stocks.each do |stock| %>
+      <tr>
+        <th scope="col"><%= stock.id %></th>
+        <td><%= stock.product.name %></td>
+        <td><%= stock.count %></td>
+        <td>
+          <%= link_to 'Show', stock, :class => 'btn btn-primary'  %>
+          <%= link_to 'Edit', edit_stock_path(stock), :class => 'btn btn-default'  %>
+          <%= link_to 'Destroy', stock, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'btn btn-danger'  %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>

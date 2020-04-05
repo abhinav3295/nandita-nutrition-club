@@ -14,6 +14,7 @@
 
  @import "bootstrap-sprockets";
  @import "bootstrap";
-.button_to.btn-inline {
-  display: inline !important;
-}
+  body {
+    width: 70%;
+    margin: 0 auto;
+  }
