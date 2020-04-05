@@ -9,7 +9,7 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="#">Nandita</a>
+        <%= link_to 'Nandita', root_path, :class => 'navbar-brand' %>
       </div>
 
       <!-- Collect the nav links, forms, and other content for toggling -->
@@ -23,6 +23,7 @@
             </ul>
           </li>
           <li><%= link_to 'Members', members_path %></li>
+          <li><%= link_to 'Add Stock', new_stock_path %></li>
         </ul>
       </div>
     </div>

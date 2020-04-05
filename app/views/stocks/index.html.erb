@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Stocks</h1>
+<h1>Stock History</h1>
 
 <%= link_to 'Add Stock', new_stock_path, :class => 'btn btn-primary' %>
 
@@ -10,6 +10,7 @@
       <th scope="col">#</th>
       <th scope="col">Product</th>
       <th scope="col">Count</th>
+      <th scope="col">Updated On</th>
       <th scope="col">Actions</th>
     </tr>
   </thead>
@@ -20,6 +21,7 @@
         <th scope="col"><%= stock.id %></th>
         <td><%= stock.product.name %></td>
         <td><%= stock.count %></td>
+        <td><%= stock.updated_at %></td>
         <td>
           <%= link_to 'Show', stock, :class => 'btn btn-primary'  %>
           <%= link_to 'Edit', edit_stock_path(stock), :class => 'btn btn-default'  %>
