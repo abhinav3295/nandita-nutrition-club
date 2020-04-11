@@ -25,5 +25,10 @@
   <%= @member.date_of_birth %>
 </p>
 
+<p>
+  <strong>Date of joining:</strong>
+  <%= @member.date_of_joining %>
+</p>
+
 <%= link_to 'Edit', edit_member_path(@member), {:class=>"btn btn-primary"} %>
 <%= link_to "View All", members_path, {:class=>"btn btn-default"} %>
