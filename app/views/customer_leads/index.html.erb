@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Customer Leads</h1>
+
+<%= link_to 'New Lead', new_customer_lead_path, :class => 'btn btn-primary' %>
+
+<table  class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Phone</th>
+      <th scope="col">Actions</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @customer_leads.each do |customer_lead| %>
+      <tr>
+        <th scope="col"><%= customer_lead.id %></th>
+        <td><%= customer_lead.name %></td>
+        <td><%= customer_lead.phone %></td>
+        <td>
+          <div>
+            <%= link_to 'Show', customer_lead, :class => 'btn btn-primary' %>
+            <%= link_to 'Edit', edit_customer_lead_path(customer_lead), :class => 'btn btn-default' %>
+            <%= link_to 'Delete', customer_lead, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'btn btn-danger' %>
+          </div>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+

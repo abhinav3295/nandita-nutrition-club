@@ -2,7 +2,7 @@
 
 <h1>Members</h1>
 
-<%= link_to 'Add Member', new_member_path, :class => 'btn btn-primary' %>
+<%= link_to 'New Member', new_member_path, :class => 'btn btn-primary' %>
 
 <table  class="table table-striped">
   <thead>
@@ -22,7 +22,7 @@
         <td><%= member.mobile %></td>
         <td>
           <div>
-            <%= link_to 'Show', member_path(member), :class => 'btn btn-primary' %>
+            <%= link_to 'Show', member, :class => 'btn btn-primary' %>
             <%= link_to 'Edit', edit_member_path(member), :class => 'btn btn-default' %>
             <%= link_to 'Delete', member, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'btn btn-danger' %>
           </div>

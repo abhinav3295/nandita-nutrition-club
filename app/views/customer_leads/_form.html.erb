@@ -1,0 +1,20 @@
+<div class="row">
+  <div class="col-md-6">
+    <%= simple_form_for(@customer_lead) do |f| %>
+      <%= f.error_notification %>
+      <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+
+      <%= f.input :id, disabled: true %>
+      <%= f.input :name %>
+      <%= f.input :phone %>
+      <%= f.input :complimentary_shake, as: :select, :selected => "false" %>
+      <%= f.input :height_cm %>
+      <%= f.input :weight_kg %>
+
+      <%= f.button :submit, class: "btn-primary" %>
+      <%= link_to "Cancel", :back, {:class=>"btn btn-default"} %>
+    <% end %>
+  </div>
+  <div class="col-md-4">
+  </div>
+</div>

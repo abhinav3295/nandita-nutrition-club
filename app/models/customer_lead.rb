@@ -1,0 +1,2 @@
+class CustomerLead < ApplicationRecord
+end

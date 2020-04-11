@@ -10,7 +10,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20200405154709) do
+ActiveRecord::Schema.define(version: 20200411050025) do
+
+  create_table "customer_leads", force: :cascade do |t|
+    t.string "name"
+    t.string "phone"
+    t.boolean "complimentary_shake"
+    t.float "height_cm"
+    t.float "weight_kg"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "member_visits", force: :cascade do |t|
+    t.integer "member_id"
+    t.date "date_of_visit"
+    t.boolean "shake_provided"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "members", force: :cascade do |t|
     t.string "name"

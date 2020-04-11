@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Member Visits</h1>
+
+<%= link_to 'New Member Visit', new_member_visit_path, :class => 'btn btn-primary' %>
+
+<table  class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Member Name</th>
+      <th scope="col">Date of visit</th>
+      <th scope="col">Shake provided</th>
+      <th scope="col">Actions</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @member_visits.each do |member_visit| %>
+      <tr>
+        <td><%= member_visit.id %></td>
+        <td><%= member_visit.member.name %></td>
+        <td><%= member_visit.date_of_visit %></td>
+        <td><%= member_visit.shake_provided %></td>
+        <td>
+          <div>
+            <%= link_to 'Show', member_visit, :class => 'btn btn-primary' %>
+            <%= link_to 'Edit', edit_member_visit_path(member_visit), :class => 'btn btn-default' %>
+            <%= link_to 'Delete', member_visit, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'btn btn-danger' %>
+          </div>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>

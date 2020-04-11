@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Member:</strong>
+  <%= @member_visit.member_id %>
+</p>
+
+<p>
+  <strong>Date of visit:</strong>
+  <%= @member_visit.date_of_visit %>
+</p>
+
+<p>
+  <strong>Shake provided:</strong>
+  <%= @member_visit.shake_provided %>
+</p>
+
+<%= link_to 'Edit', edit_member_visit_path(@member_visit) %> |
+<%= link_to 'Back', member_visits_path %>

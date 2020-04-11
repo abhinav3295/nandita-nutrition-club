@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :member_visits
+  resources :customer_leads
   resources :stocks
   resources :products
   resources :members

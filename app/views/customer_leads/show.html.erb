@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>ID:</strong>
+  <%= @customer_lead.id %>
+</p>
+
+
+<p>
+  <strong>Name:</strong>
+  <%= @customer_lead.name %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @customer_lead.phone %>
+</p>
+
+<p>
+  <strong>Height cm:</strong>
+  <%= @customer_lead.height_cm %>
+</p>
+
+<p>
+  <strong>Weight kg:</strong>
+  <%= @customer_lead.weight_kg %>
+</p>
+
+<%= link_to 'Edit', edit_customer_lead_path(@customer_lead), {:class=>"btn btn-primary"} %>
+<%= link_to "View All", customer_leads_path, {:class=>"btn btn-default"} %>
