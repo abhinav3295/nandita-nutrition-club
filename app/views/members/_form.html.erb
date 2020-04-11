@@ -6,7 +6,7 @@
 
       <%= f.input :id, disabled: true %>
       <%= f.input :name %>
-      <%= f.input :date_of_birth, start_year: Date.today.year - 90, end_year: Date.today.year - 12 %>
+      <%= f.input :date_of_birth, as: :datepicker %>
       <%= f.input :age , disabled: true %>
       <%= f.input :mobile %>
       <%= f.button :submit, class: "btn-primary" %>
