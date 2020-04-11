@@ -63,13 +63,18 @@ class MembersController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_member
-      @member = Member.find(params[:id])
-    end
 
-    # Only allow a list of trusted parameters through.
-    def member_params
-      params.require(:member).permit(:name, :age, :mobile, :date_of_birth, :date_of_joining, :membership_type)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_member
+    @member = Member.find(params[:id])
+  end
+
+  # Only allow a list of trusted parameters through.
+  def member_params
+    params.require(:member).permit(
+      :name, :age, :mobile,
+        :date_of_birth, :date_of_joining,
+        :membership_type, :coach_id
+    )
+  end
 end

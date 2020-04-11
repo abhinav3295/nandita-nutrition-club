@@ -7,6 +7,7 @@
       <%= f.input :id, disabled: true %>
       <%= f.input :name %>
       <%= f.input :membership_type, collection: [:Trial, :GUMS], :selected => f.object.membership_type || :Trial %>
+      <%= f.association :coach %>
       <%= f.input :date_of_birth, as: :datepicker %>
       <%= f.input :date_of_joining, as: :datepicker, input_html: {value: f.object.date_of_joining || Date.today.strftime('%d/%m/%Y')}  %>
       <%= f.input :age , disabled: true %>
