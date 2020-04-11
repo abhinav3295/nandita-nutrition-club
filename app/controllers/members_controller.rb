@@ -41,6 +41,7 @@ class MembersController < ApplicationController
   # PATCH/PUT /members/1.json
   def update
     respond_to do |format|
+      puts "member_params: #{member_params}"
       if @member.update(member_params)
         format.html { redirect_to @member, notice: 'Member was successfully updated.' }
         format.json { render :show, status: :ok, location: @member }
@@ -69,6 +70,6 @@ class MembersController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def member_params
-      params.require(:member).permit(:name, :age, :mobile, :date_of_birth)
+      params.require(:member).permit(:name, :age, :mobile, :date_of_birth, :date_of_joining)
     end
 end
