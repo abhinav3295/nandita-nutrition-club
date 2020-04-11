@@ -6,8 +6,8 @@
 
       <%= f.input :id, disabled: true %>
       <%= f.association :member %>
-      <%= f.input :date_of_visit, as: :datepicker %>
-      <%= f.input :shake_provided, as: :select, :selected => "true" %>
+      <%= f.input :date_of_visit, as: :datepicker,input_html: {value: f.object.date_of_visit || Date.today.strftime('%d/%m/%Y')} %>
+      <%= f.input :shake_provided, as: :select, :selected => f.object.shake_provided ||"true" %>
       <%= f.button :submit, class: "btn-primary" %>
       <%= link_to "Cancel", :back, {:class=>"btn btn-default"} %>
     <% end %>

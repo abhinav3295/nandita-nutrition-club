@@ -7,7 +7,7 @@
       <%= f.input :id, disabled: true %>
       <%= f.input :name %>
       <%= f.input :phone %>
-      <%= f.input :complimentary_shake, as: :select, :selected => "false" %>
+      <%= f.input :complimentary_shake, as: :select, :selected => f.object.complimentary_shake || "false" %>
       <%= f.input :height_cm %>
       <%= f.input :weight_kg %>
 

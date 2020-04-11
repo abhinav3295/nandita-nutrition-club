@@ -15,5 +15,5 @@
   <%= @member_visit.shake_provided %>
 </p>
 
-<%= link_to 'Edit', edit_member_visit_path(@member_visit) %> |
-<%= link_to 'Back', member_visits_path %>
+<%= link_to 'Edit', edit_member_visit_path(@member_visit), {:class=>"btn btn-primary"} %>
+<%= link_to "View All", member_visits_path, {:class=>"btn btn-default"} %>
